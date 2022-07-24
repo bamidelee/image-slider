@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+img{
+    height: 30rem;
+    width:40rem;
+}
+
+.image{
+    width: 100%;
+}
+.image-frame{
+    display: grid;
+    justify-content: center;
+    margin-top: 3rem;
+    overflow: hidden;
+}
+.image-container{
+ 
+    position: relative;
+    grid-template-columns: repeat(6, auto);
+    transition: all 2s ease-in;
+}
+.left-button{
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    font-size: 4rem;
+    color: white;
+    opacity: .6;
+    cursor: pointer;
+}
+.right-button{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    color: white;
+    opacity: .6;
+    z-index: 1;
+    font-size: 4rem;
+    cursor: pointer;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 20s;
+  }
+  
+  @keyframes fade {
+    0% {opacity: .4;
+        transform: scale(1, 1);}
+    10% {opacity: 1; transform: scale(1.3, 1.3);}
+    100% {transform: scale(1, 1);}
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
